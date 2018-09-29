@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply from: '../config/functions.gradle'
+
 android {
     signingConfigs {
         defaulSing {
@@ -38,9 +40,20 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+
+        applicationVariants.all{
+            variant ->
+                variant.buildConfigField STRING, WEATHER_API, getCustomProperty(WEATHER_API)
+        }
+        debug {
+            minifyEnabled false
+            //signingConfig signingConfigs.defaulKey
+            buildConfigField BOOLEAN, DEBUG_MODE, TRUE
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, DEBUG_MODE, FALSE
         }
     }
 }
