@@ -4,17 +4,17 @@ def INT = "int"
 def TRUE = "true"
 def FALSE = "false"
 def DEBUG_MODE = "DEBUG_MODE"
-
+//-----------------------------
 ext.BOOLEAN = BOOLEAN
 ext.STRING = STRING
 ext.INT = INT
 ext.TRUE = TRUE
 ext.FALSE = FALSE
 ext.DEBUG_MODE = DEBUG_MODE
-
+//-------------------------------
 def WEATHER_API = "weather_api"
 ext.WEATHER_API = WEATHER_API
-
+//------------------------------
 def getCustomProperty(key){
     Properties props = new Properties()
     def propFile = file("../config/config.properties")
@@ -33,5 +33,10 @@ def getCustomProperty(key){
     }
     return null
 }
-
 ext.getCustomProperty = this.&getCustomProperty
+//----------------------------------
+def addRepos(RepositoryHandler handler){
+    handler.google()
+    handler.jcenter()
+}
+ext.addRepos = this.&addRepos
