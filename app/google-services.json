@@ -1,0 +1,41 @@
+{"project_info": {
+    "project_number": "215751982480",
+    "firebase_url": "https://mi-tiempo-eaa3f.firebaseio.com",
+    "project_id": "mi-tiempo-eaa3f",
+    "storage_bucket": "mi-tiempo-eaa3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215751982480:android:0f6f881869bd124e",
+        "android_client_info": {
+          "package_name": "cristhian.android.mitiempo.mitiempo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215751982480-2d0ra0qj37qlrefcvknp05sqpsucpeog.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFafVsCBjQwbsdCXnRAk9j0iWvSCL7N4E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
