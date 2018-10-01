@@ -15,6 +15,9 @@ ext.DEBUG_MODE = DEBUG_MODE
 def WEATHER_API = "weather_api"
 ext.WEATHER_API = WEATHER_API
 //------------------------------
+def WEATHER_ICON_URL = "weather_icon_url"
+ext.WEATHER_ICON_URL = WEATHER_ICON_URL
+//------------------------------
 def getCustomProperty(key){
     Properties props = new Properties()
     def propFile = file("../config/config.properties")
